@@ -1,10 +1,14 @@
 package api;
 
+import model.TelephoneNumber;
+
 import java.util.List;
 
 public interface Telecom {
 
-    List<String> getAllTelephoneNumbers();
+    List<TelephoneNumber> getAllTelephoneNumbers();
 
-    List<String> getTelephoneNumbersForCustomer(final String customer) throws IllegalArgumentException;
+    List<TelephoneNumber> getTelephoneNumbersForCustomer(final String customer) throws IllegalArgumentException;
+
+    void activateTelephoneNumber(final String telephoneNumber) throws IllegalArgumentException;
 }
